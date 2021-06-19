@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+        
+    <!-- Update these with your own fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sino Editor</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/sino_world_logo.png" alt="">
+        </div>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="https://avrumnoor.github.io/PresquePartoutSino/#home" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="https://avrumnoor.github.io/PresquePartoutSino/#work" class="nav__link">Our Online Courses</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Sino Editor</a></li>
+                <li class="nav__item"><a href="https://avrumnoor.github.io/PresquePartoutSino/#weekly-digests" class="nav__link">Weekly Digest</a></li>
+                <li class="nav__item"><a href="https://avrumnoor.github.io/PresquePartoutSino/#about" class="nav__link">Instructors</a></li>
+                <li class="nav__item"><a href="https://avrumnoor.github.io/PresquePartoutSino/#services" class="nav__link">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class = "section__title">Sino Editor Beta</h1>
+        <div class="controls">
+            <div class="main-controls">
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                        File
+                    </button>
+                    <div class="dropdown-menu">
+                        <button id="new-btn" class="dropdown-item">
+                            New
+                        </button>
+                        <button id="txt-btn" class="dropdown-item">
+                            Save as TXT
+                        </button>
+                        <button id="pdf-btn" class="dropdown-item">
+                            Save as PDF
+                        </button>
+                    </div>
+                </div>
+
+                <input id="filename-input" type="text" value="untitled" />
+            </div>
+            <div class="control-btn-container">
+                <button id="bold-btn" class="btn btn-dark control-btn">
+                    b
+                </button>
+                <button id="underline-btn" class="btn btn-dark control-btn">
+                    u
+                </button>
+                <button id="italic-btn" class="btn btn-dark control-btn">
+                    i
+                </button>
+                <input id="color-btn" type="color" class="control-btn" />
+            </div>
+        </div>
+
+        <div id="content" contenteditable="true" spellcheck="false"></div>
+    </div>
+
+    <footer class="footer">
+        <!-- replace with your own email address -->
+        Copyright 2021. All rights reserved.
+        <br>
+        <a href="https://brucechanglongxu.github.io" class="footer__link">Bruce Changlong Xu
+        <br>
+        <a href="https://avrumnoor.github.io" class="footer__link">Avrum Noor
+        </a>
+        <ul class="social-list">
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://instagram.com">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://twitter.com">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="htmltopdf.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
